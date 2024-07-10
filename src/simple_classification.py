@@ -1,5 +1,4 @@
 import vertexai
-import json
 
 from vertexai.generative_models import GenerativeModel
 
