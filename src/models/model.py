@@ -14,6 +14,7 @@ class TicketCatgory(str, Enum):
     MATERIAL_ISSUE = "material_issue"
     APPLICATION_ACCESS = "application_access"
     NEW_EMPLOYEE_CREATION = "new_employee_creation"
+    OTHER = "other"
 
 
 class TicketUrgency(str, Enum):
@@ -37,6 +38,7 @@ class Ticket(BaseModel):
     """
     category: TicketCatgory
     urgency: TicketUrgency
+    confidence: float = Field(ge=0, le=1, description="Confidence score of the model")
     key_information: List[str] = Field(description="List of key points extracted from the ticket")
     suggested_action: str = Field(description="Brief suggestion for handling the ticket")  
 
