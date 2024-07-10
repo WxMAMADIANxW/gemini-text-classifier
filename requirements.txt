@@ -2,3 +2,4 @@ google-generativeai
 instructor
 pydantic
 google-cloud-aiplatform
+jsonref
