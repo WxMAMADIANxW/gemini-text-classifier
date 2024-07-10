@@ -15,7 +15,7 @@ model = GenerativeModel(
   system_instruction="Classify the following customer support ticket into a category."
 )
 
-def classify_ticket(ticket_text: str) -> dict:
+def classify_ticket(ticket_text: str) -> str:
     """this function classifies a ticket into a category
 
     Args:
